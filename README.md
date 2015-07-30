@@ -13,6 +13,8 @@ Installation instructions
 
 Installation follows standard symfony2 application deployment: http://symfony.com/doc/current/cookbook/deployment/tools.html
 
+* Install and configure a webserver (Apache, Nginx) with MySql and PHP
+* Install extra required PHP modules: `php-curl php-gd php-intl`
 * Put this code on the server.
 * Run `php app/check.php` in the project root directory to make sure you meet requirements, fix as neccesary.
 * Install dependencies:
