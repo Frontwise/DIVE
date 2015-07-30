@@ -111,6 +111,9 @@ public function JSONResponse($jsonString,$etag){
     $response->setPublic();
     $response->headers->set('Content-Type', 'application/json');
 
+    $response->setMaxAge(600);
+    $response->setSharedMaxAge(600);
+
    // Check that the Response is not modified for the given Request
     if ($response->isNotModified($this->getRequest())) {
       // return the 304 Response immediately
