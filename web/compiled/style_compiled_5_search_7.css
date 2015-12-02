@@ -1,0 +1,83 @@
+#search .row{
+	overflow: hidden;
+	position: relative;
+}
+
+#search-filter .entity-color{
+	background-color : rgba(255,255,255,0.2);
+}
+
+
+
+/* SEARCH FIELD */
+
+#search-field{
+	font-family: 'RobotoCondensed';
+	padding: 10px 20px 10px 50px;
+	border-radius: 25px;
+	font-size: 1.2em;
+	height: 30px;
+	width: 400px;
+	border: 0;
+	outline: 0;
+	background-image: url('/img/icon-search.png');
+	background-size: 22px 22px;
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	margin: 30px auto;
+	display: block;	
+}
+
+/* SEARCH CROSS */
+
+#search-cross{
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	height: 50px;
+	margin-left: 180px;
+	border: 0;
+	outline: 0;
+	width: 50px;
+	background-image: url('/img/icon-cross.png');
+	background-size: 17px 17px;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: block;
+	opacity: 0.8;
+	display: none;
+}
+
+#search-cross:hover{
+	opacity: 1.0;
+	cursor: pointer;
+}
+
+
+/* SUGGESTIONS */
+
+#suggestions{
+	margin: 0px 0 30px 0;
+	text-align: center;
+}
+
+#suggestions span{
+	display: inline-block;
+	background-color: rgba(255,255,255,0.2);
+	padding: 5px 15px;
+	border-radius: 20px;
+	color: white;
+	margin-left: 10px;
+	cursor: pointer;
+	margin-top: 10px;
+	text-align: center;
+}
+
+#suggestions span:hover{
+	background-color: rgba(255,255,255,0.4);
+}
+
+
+#suggestions span:active, #suggestions span.current{
+	background-color: rgba(255,255,255,0.6);
+}

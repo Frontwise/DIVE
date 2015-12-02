@@ -1,0 +1,123 @@
+
+/*	COLORS */
+
+/*search:black:252a32
+Actor:lblue:32b5c3
+concept:yellow:f1b84d
+object:red:dd3749
+event:purple:ab6cad
+Place:grey:878d94
+time:blue:3b83c5
+narrative:green:5cbc56*/
+
+.entity-color{
+	background-color: #dda;
+}
+
+.entity-Actor .entity-color, .color-Actor, .entity-Concept .entity-color, .color-Concept{
+	background-color: #f1b84d;
+}
+.entity-Person .entity-color, .color-Person{
+	background-color: #32b5c3;
+}
+.entity-MediaObject .entity-color, .color-MediaObject{
+	background-color: #dd3749;
+}
+.entity-Place .entity-color, .color-Place{
+	background-color: #878d94;
+}
+.entity-Event .entity-color, .color-Event{
+	background-color: #ab6cad;
+}
+.entity-Collection .entity-color, .color-Collection{
+	background-color: #5cbc56;
+}
+.entity-Search .entity-color, .color-Search{
+	background-color: #252a32;
+}
+.entity-Unknown .entity-color, .color-Unknown{
+	background-color: #7d8a9f;
+}
+
+
+.icon-Search, .entity-Search .icon{
+	background-image: url('../../img/icon-search.png');
+}
+
+.icon-Actor, .entity-Concept .Actor,
+.icon-Concept, .entity-Concept .icon{
+	background-image: url('../../img/icon-concept.png');
+}
+.icon-Person, .entity-Person .icon{
+	background-image: url('../../img/icon-person.png');
+}
+
+.icon-MediaObject, .entity-MediaObject .icon{
+	background-image: url('../../img/icon-object.png');
+}
+.icon-Place, .entity-Place .icon{
+	background-image: url('../../img/icon-place.png');
+}
+.icon-Event, .entity-Event .icon{
+	background-image: url('../../img/icon-event.png');
+}
+.icon-Collection, .entity-Collection .icon{
+	background-image: url('../../img/icon-collection.png');
+}
+
+.icon-Time, .entity-Time .icon{
+	background-image: url('../../img/icon-time.png');
+}
+
+.icon-Data, .entity-Data .icon {
+	background-image: url('../../img/icon-data.png');
+}
+
+.icon-Link, .entity-Link .icon{
+	background-image: url('../../img/icon-link.png');
+}
+
+.icon-details{
+	background-image: url('../../img/icon-details.png');
+}
+
+.icon-comments{
+	background-image: url('../../img/icon-comments.png');
+}
+
+.icon-collections{
+	background-image: url('../../img/icon-collections.png');
+}
+
+.icon-europeana{
+	background-image: url('../../img/icon-europeana.png');
+}
+
+.border-Actor,
+.border-Concept{
+	border-color: #f1b84d;
+}
+.border-Person{
+	border-color: #32b5c3;
+}
+
+.border-MediaObject{
+	border-color: #dd3749;
+}
+.border-Place{
+	border-color: #878d94;
+}
+.border-Event{
+	border-color: #ab6cad;
+}
+.border-Collection{
+	border-color: #5cbc56;
+}
+.border-Search{
+	border-color: #252a32;
+}
+
+.border-Link{
+	border-color: rgba(0,0,0,0.4);
+}
+
