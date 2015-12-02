@@ -28,7 +28,8 @@ Installation follows standard symfony2 application deployment: http://symfony.co
     * Enter connection details into `app/config/parameters.yml`, clear `app/cache` directory afterwards.
     * run `php app/console doctrine:schema:update --force --no-debug` in the project root to create all tables.
 * Install assets
-	* run `php app/console assets:install --symlink` in the project root to install assets with symlinks.
+  * run `php app/console assets:install --symlink` in the project root to install assets with symlinks.
+	* run `php app/console assetic:watch` in the project root to compile and monitor assets.
 
 Create a custom API
 =========================
