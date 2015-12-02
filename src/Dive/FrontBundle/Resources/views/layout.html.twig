@@ -23,17 +23,25 @@
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:800,700,400,300' rel='stylesheet' type='text/css'>
   {% block stylesheets %}
-  {#% stylesheets 'css/*' %}
+  {% stylesheets
+      '@DiveFrontBundle/Resources/ui/css/0_reset.css'
+      '@DiveFrontBundle/Resources/ui/css/vendor/ui-lightness/jquery-ui.min.css'
+      '@DiveFrontBundle/Resources/ui/css/1_main.css'
+      '@DiveFrontBundle/Resources/ui/css/2_page.css'
+      '@DiveFrontBundle/Resources/ui/css/3_gallery.css'
+      '@DiveFrontBundle/Resources/ui/css/4_browser.css'
+      '@DiveFrontBundle/Resources/ui/css/5_search.css'
+  output='compiled/style_compiled.css' filter='cssrewrite'%}
   <link rel="stylesheet" href="{{ asset_url }}" />
-  {% endstylesheets %#}
-  <link rel="stylesheet" href="{{ asset('css/0_reset.css') }}" />
+  {% endstylesheets %}
+  {#<link rel="stylesheet" href="{{ asset('css/0_reset.css') }}" />
   <link rel="stylesheet" href="{{ asset('css/vendor/ui-lightness/jquery-ui.min.css') }}" />
   <link rel="stylesheet" href="{{ asset('css/1_main.css') }}" />
   <link rel="stylesheet" href="{{ asset('css/2_page.css' ) }}" />
   <link rel="stylesheet" href="{{ asset('css/3_gallery.css' ) }}" />
   <link rel="stylesheet" href="{{ asset('css/4_browser.css' ) }}" />
-  <link rel="stylesheet" href="{{ asset('css/5_search.css' ) }}" />
-  <link rel="stylesheet" href="{{ asset('css/config/Config-'~dataset~'.css' ) }}" />
+  <link rel="stylesheet" href="{{ asset('css/5_search.css' ) }}" />#}
+  <link rel="stylesheet" href="{{ asset('config/'~dataset~'/style.css' ) }}" />
   {% endblock %}
   <!--[if lt IE 9]>
     <script src="{{ asset('js/vendor/html5shiv.js')}}"></script>
@@ -70,7 +78,7 @@
     {% endblock %}
 
     {# load config #}
-    <script type="text/javascript" src="{{ asset('js/config/Config-'~dataset~'.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('config/'~dataset~'/script.js') }}"></script>
 
     {# set Globals #}
     <script type="text/javascript">
@@ -92,30 +100,65 @@
     </script>
 
     {% block javascripts %}
-    {#% javascripts 'js/vendor/*' 'js/*' %}
+    {% javascripts
+    '@DiveFrontBundle/Resources/ui/js/vendor/fastclick.js'
+    '@DiveFrontBundle/Resources/ui/js/vendor/jquery-1.10.2.min.js'
+    '@DiveFrontBundle/Resources/ui/js/vendor/jquery-ui-1.10.4.min.js'
+    '@DiveFrontBundle/Resources/ui/js/vendor/jquery.hammer-full.min.js'
+    '@DiveFrontBundle/Resources/ui/js/vendor/moment.min.js'
+    '@DiveFrontBundle/Resources/ui/js/vendor/velocity.min.js'
+    '@DiveFrontBundle/Resources/ui/js/Helpers.js'
+    '@DiveFrontBundle/Resources/ui/js/User.js'
+    '@DiveFrontBundle/Resources/ui/js/Row.js'
+    '@DiveFrontBundle/Resources/ui/js/Timeline.js'
+    '@DiveFrontBundle/Resources/ui/js/Marker.js'
+    '@DiveFrontBundle/Resources/ui/js/Entity.js'
+    '@DiveFrontBundle/Resources/ui/js/DataEntity.js'
+    '@DiveFrontBundle/Resources/ui/js/Visual.js'
+    '@DiveFrontBundle/Resources/ui/js/Filter.js'
+    '@DiveFrontBundle/Resources/ui/js/FilterAction.js'
+    '@DiveFrontBundle/Resources/ui/js/Button.js'
+    '@DiveFrontBundle/Resources/ui/js/Browser.js'
+    '@DiveFrontBundle/Resources/ui/js/Data.js'
+    '@DiveFrontBundle/Resources/ui/js/Details.js'
+    '@DiveFrontBundle/Resources/ui/js/Collections.js'
+    '@DiveFrontBundle/Resources/ui/js/CollectionMenu.js'
+    '@DiveFrontBundle/Resources/ui/js/Comments.js'
+    '@DiveFrontBundle/Resources/ui/js/Europeana.js'
+    '@DiveFrontBundle/Resources/ui/js/Share.js'
+    '@DiveFrontBundle/Resources/ui/js/Search.js'
+    '@DiveFrontBundle/Resources/ui/js/Gallery.js'
+    '@DiveFrontBundle/Resources/ui/js/Showcase.js'
+    '@DiveFrontBundle/Resources/ui/js/Block.js'
+    '@DiveFrontBundle/Resources/ui/js/Help.js'
+    '@DiveFrontBundle/Resources/ui/js/Popup.js'
+    '@DiveFrontBundle/Resources/ui/js/HashPath.js'
+    '@DiveFrontBundle/Resources/ui/js/Preload.js'
+    '@DiveFrontBundle/Resources/ui/js/main.js'
+    output="compiled/script_compiled.js" %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
-    {% endjavascripts %#}
-    {#% javascripts
-    'js/vendor/fastclick.js'
-    'js/vendor/jquery-1.10.2.min.js'
-    'js/vendor/jquery-ui-1.10.4.min.js'
-    'js/vendor/jquery.hammer-full.min.js'
-    'js/Helpers.js'
-    %}
-    <script type="text/javascript" src="{{ asset_url }}"></script>
-    {% endjavascripts %#}
+    {% endjavascripts %}
 
-    <script type="text/javascript" src="{{ asset('js/vendor/fastclick.js') }}"></script>
+    {# <script type="text/javascript" src="{{ asset('js/vendor/fastclick.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/vendor/jquery-1.10.2.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/vendor/jquery-ui-1.10.4.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/vendor/jquery.hammer-full.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/vendor/moment.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/vendor/velocity.min.js') }}"></script>
+     #}
+
     <script type="text/javascript" src="{{ asset('bundles/frontwiseajaxlog/js/AjaxLog.js') }}"></script>
     <script type="text/javascript">
       AjaxLog.basePath = Global.basePath + AjaxLog.basePath;
     </script>
-    <script type="text/javascript" src="{{ asset('js/Helpers.js') }}"></script>
+
+
+
+
+
+
+
+   {#} <script type="text/javascript" src="{{ asset('js/Helpers.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/User.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/Row.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/Timeline.js') }}"></script>
@@ -142,7 +185,7 @@
     <script type="text/javascript" src="{{ asset('js/Popup.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/HashPath.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/Preload.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>#}
     {% endblock %}
 
 
