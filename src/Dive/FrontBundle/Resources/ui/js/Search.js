@@ -54,7 +54,7 @@ Search.prototype.initListener = function(){
 
 	$('#search-cross').click(function(){
 		$(this).hide();
-		$('#search-field').val('').trigger('change');
+		$('#search-field').val('').trigger('change').trigger('focus');
 	});
 }
 
