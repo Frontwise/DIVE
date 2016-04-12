@@ -15,7 +15,7 @@ function Browser(container){
 	this.entityLimit = Global.data.entityLimit;
 	this.$rowHolder;
 	this.$scrollUpButton;
-	this.$scrollDownButton;
+	this.$scrollDownButton;	
 	this.init();
 }
 
@@ -33,8 +33,8 @@ Browser.prototype.init = function(){
 Browser.prototype.build = function(){
 	this.$rowHolder = $(document.createElement('div')).addClass('row-holder');
 	this.$container.append(this.$rowHolder);
-	this.$scrollUpButton = $(document.createElement('div')).attr('id','scrollup-button').addClass('scrollButton');
-	this.$scrollDownButton = $(document.createElement('div')).attr('id','scrolldown-button').addClass('scrollButton');
+	this.$scrollUpButton = $(document.createElement('div')).attr('id','scrollup-button').addClass('scrollButton').attr('title','Go to entity above');
+	this.$scrollDownButton = $(document.createElement('div')).attr('id','scrolldown-button').addClass('scrollButton').attr('title','Go to entity below');
 	this.$container.append(this.$scrollUpButton);
 	this.$container.append(this.$scrollDownButton);
 
@@ -73,11 +73,13 @@ Browser.prototype.initInteraction = function(){
 
 Browser.prototype.resize = function(){
 	clearTimeout(this.resizeTimer);
+	
+	Global.maxHeaderHeight = window.innerHeight / 3;
+
 	this.resizeTimer = setTimeout(function(){
 		for (var i=0, len = this.rows.length; i<len;i++){
 			this.rows[i].calcMinWidth(false);
 			this.rows[i].calcWidth();
-			this.rows[i].zoomAction(1, 0);
 			if(this.rows[i].currentEntity){
 				this.rows[i].growEntity(this.rows[i].currentEntity);
 			}

@@ -16,7 +16,6 @@ $(document).ready(function(){
 	
 	Global.easing = "easeOutSine";
 	Global.animationDuration = 400;
-	//Global.easing = "linear";
 
 	Global.user = new User();
 	Global.collectionMenu = new CollectionMenu();
@@ -30,6 +29,8 @@ $(document).ready(function(){
 	// automatically load a search
 	//$('#search-field').val('Verenigde Naties').trigger('change');
 	//$('#search-field').val('Amsterdam').trigger('change');
+
+	$('#search-field').trigger('focus');
 
 
 	// mutation observer for DOM changes

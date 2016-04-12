@@ -91,8 +91,8 @@ Details.prototype.detailsSuccess = function(data){
 	if (!data || !data.data){ return; }
 	if (data.data.length > 0){
 		this.entity.data.description = '';
-		if (this.entity.data.type == 'Event'){
-			this.entity.data.description += this.entity.data.date.start ? this.entity.data.date.start + ' : ' : "Unknown timestamp : ";
+		if (true || this.entity.data.type == 'Event'){
+		this.entity.data.description += this.entity.data.date.start ? this.entity.data.date.start + ' : ' : "Unknown timestamp | ";
 		}
 		this.entity.data.description += data.data[0].description
 		this.entity.data.sources = [];

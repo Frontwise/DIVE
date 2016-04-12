@@ -56,7 +56,7 @@
   <body class="{% block bodyClass %}{% endblock %}">
     {% block page %}
     <div id="topbar">
-      <img src="{{ asset('img/dive-logo.png') }}" id="logo" onclick="document.location.href = '{{ app.request.baseUrl }}/{{dataset}}'; return false;">
+      <img src="{{ asset('img/dive-logo.png') }}" id="logo" title="DIVE - Go to home" onclick="document.location.href = '{{ app.request.baseUrl }}/{{dataset}}'; return false;">
       <div id="log"></div>
       <div id="collections-button"  class="button" title="Collections"></div>
       <div id="user-button"  class="button" title="Registered users"></div>
@@ -87,8 +87,8 @@
       // load config
       Global.config = new Config();
 
-      Global.touchSupport = 'ontouchstart' in document.documentElement;
-
+      Global.touchSupport = false; //'ontouchstart' in document.documentElement;
+      Global.maxHeaderHeight = window.innerHeight / 3;
       Global.basePath = '{{ path("dive_front_browse_index") }}';
       Global.dataset = '{{ dataset }}';
 
@@ -139,53 +139,11 @@
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
 
-    {# <script type="text/javascript" src="{{ asset('js/vendor/fastclick.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/vendor/jquery-1.10.2.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/vendor/jquery-ui-1.10.4.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/vendor/jquery.hammer-full.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/vendor/moment.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/vendor/velocity.min.js') }}"></script>
-     #}
-
     <script type="text/javascript" src="{{ asset('bundles/frontwiseajaxlog/js/AjaxLog.js') }}"></script>
     <script type="text/javascript">
       AjaxLog.basePath = Global.basePath + AjaxLog.basePath;
     </script>
 
-
-
-
-
-
-
-   {#} <script type="text/javascript" src="{{ asset('js/Helpers.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/User.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Row.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Timeline.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Marker.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Entity.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/DataEntity.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Visual.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Filter.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/FilterAction.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Button.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Browser.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Data.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Details.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Collections.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/CollectionMenu.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Comments.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Europeana.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Share.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Search.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Gallery.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Showcase.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Block.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Help.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Popup.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/HashPath.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/Preload.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>#}
     {% endblock %}
 
 
