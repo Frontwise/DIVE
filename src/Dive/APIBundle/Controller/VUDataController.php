@@ -184,7 +184,7 @@ private function getSearchData($type){
         $searchStr = substr($k,1);
         $exclude = '! ';
       }
-      $keywordsList .= ' FILTER ('.$exclude.'(CONTAINS(lcase(str(?alabel)), "'. mysql_escape_string(strtolower($searchStr)).'") || CONTAINS(lcase(str(?adescription)), "'. mysql_escape_string(strtolower($searchStr)).'")))';
+      $keywordsList .= ' FILTER ('.$exclude.'(CONTAINS(lcase(str(?alabel)), "'. addslashes(strtolower($searchStr)).'") || CONTAINS(lcase(str(?adescription)), "'. addslashes(strtolower($searchStr)).'")))';
     }
     break;
     case 'searchids':
@@ -199,7 +199,7 @@ private function getSearchData($type){
               $keywordsList .= ' || ';
             }
             $keywordsCount++;
-            $keywordsList .= '?entity = <'. mysql_escape_string($k).'>';
+            $keywordsList .= '?entity = <'. addslashes($k).'>';
           }
         }
         /* (*/   $keywordsList .= ')';

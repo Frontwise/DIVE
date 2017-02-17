@@ -300,8 +300,8 @@ private function encodeId($uid){
    public function relatednessAction()
    {
     $timeStart = microtime(true);
-    $id1 = mysql_escape_string($this->getRequest()->get('id1',0));
-    $id2 = mysql_escape_string($this->getRequest()->get('id2',0));
+    $id1 = addslashes($this->getRequest()->get('id1',0));
+    $id2 = addslashes($this->getRequest()->get('id2',0));
     $key = sha1($id1.$id2);
     $data = $this->getCachedQuery('relatedness',$key);
     $fromCache = true;
