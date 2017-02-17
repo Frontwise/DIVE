@@ -127,7 +127,7 @@ Data.prototype.getNextRelatedRequest = function(){
 	}
 	if (callMore && this.loadingRelated < this.maxQueue - 1){
 		//this.getNextRelatedRequest();
-		setTimeout(this.getNextRelatedRequest.bind(), 0);
+		setTimeout(this.getNextRelatedRequest.bind(this), 0);
 	}
 }
 
