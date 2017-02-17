@@ -22,6 +22,21 @@ class LogController extends Controller
      */
     public function createAction($level = 'info')
     {
+
+        switch($level){
+            case 'error':
+                $level = 1;
+            break;
+            case 'security':
+                $level = 2;
+            break;
+            case 'debug':
+                $level = 3;
+            break;
+            default:
+            $level = 0;
+        }
+
         // save session
         $this->get('session')->save();
     	// get request

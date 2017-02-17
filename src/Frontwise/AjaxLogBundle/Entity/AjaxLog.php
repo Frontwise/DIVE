@@ -173,15 +173,17 @@ class AjaxLog
     }
 
     public function isValidLevel($level){
+        $levelNames = $this->getLevelNames();
+
         if (!is_numeric($level)){
             // valid level name
-            $levelNames = $this->getLevelNames();
             $len = count($levelNames);
             while($len--){
                 if($levelNames[$len] == $level){
                     return $len;
                 }
             }
+            return self::$LEVEL_INFO;
         } else{
             // valid numeric level
             if ($level < count($levelNames)){
