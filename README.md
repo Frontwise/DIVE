@@ -5,7 +5,7 @@ DIVE
 
 DIVE is a linked-data digital cultural heritage collection browser. It was developed to provide innovative access to heritage objects from heterogeneous collections, using historical events and narratives as the context for searching, browsing and presenting of individual and group of objects.
 
-![Screens](https://frontwise.com/uploads/DIVE/Devices.png)
+![Screens](transfer.frontwise.com/beeldengeluid/dive/Devices.png)
 
 
 Installation instructions
