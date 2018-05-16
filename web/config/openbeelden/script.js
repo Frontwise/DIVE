@@ -8,7 +8,11 @@ function Config(){
 	this.addBasePath = true;
 
 	// cases to be loaded in the gallery
-	this.galleryCases = ['person-queen-juliana-der-nederlanden', 'oai:openimages.eu:679187','concept-vredespaleis'];
+	this.galleryCases = [
+		{caseType : 'Related', identifier: 'concept-vredespaleis'},
+		{caseType : 'Related', identifier: 'concept-watersnoodramp-1953'}
+		{caseType : 'Related', identifier: 'location-zutphen'},
+	];
 
 	// search suggestions
 	this.searchSuggestions = ['Verenigde Naties','Haarlem','Verkiezingen','Kaasmarkt','Watersnood','Vredespaleis'];
