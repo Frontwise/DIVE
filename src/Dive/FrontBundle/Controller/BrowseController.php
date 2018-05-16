@@ -13,6 +13,7 @@ use Dive\FrontBundle\Entity\User;
 class BrowseController extends BaseController
 {
     /**
+     * @Route("/", defaults={"dataset" = "openbeelden"})
      * @Route("/{dataset}", defaults={"dataset" = "openbeelden"})
      * @Template()
      */

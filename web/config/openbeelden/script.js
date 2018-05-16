@@ -8,10 +8,10 @@ function Config(){
 	this.addBasePath = true;
 
 	// cases to be loaded in the gallery
-	this.galleryCases = [];
+	this.galleryCases = ['person-queen-juliana-der-nederlanden', 'oai:openimages.eu:679187','concept-vredespaleis'];
 
 	// search suggestions
-	this.searchSuggestions = ['Verenigde Naties','Rotterdam','Verkiezingen','Kaasmarkt','Lubbers','Vredespaleis'];
+	this.searchSuggestions = ['Verenigde Naties','Haarlem','Verkiezingen','Kaasmarkt','Watersnood','Vredespaleis'];
 
 
 	// content buttons
