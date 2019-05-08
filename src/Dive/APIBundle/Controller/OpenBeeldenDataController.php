@@ -14,7 +14,7 @@ class OpenBeeldenDataController extends BaseController
 {
 
   public $dataSet = 2;
-  public $apiHost = 'http://data.diveplus.frontwise.com/data/ogTUxdlqbyS4FsZmsQdOEGgmS2U795/openbeelden-graph';
+  public $apiHost = 'https://data.diveplus.frontwise.com/data/ogTUxdlqbyS4FsZmsQdOEGgmS2U795/openbeelden-graph';
   /**
    * @Route("/search")
    */
