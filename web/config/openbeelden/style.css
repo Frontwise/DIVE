@@ -55,7 +55,7 @@ narrative:green:5cbc56*/
 .icon-MediaObject, .entity-MediaObject .icon{
 	background-image: url('../../img/icon-object.png');
 }
-.icon-Location, .entity-Location .icon, .icon-Location, .entity-Place .icon{
+.icon-Location, .entity-Location .icon, .icon-Place, .entity-Place .icon{
 	background-image: url('../../img/icon-place.png');
 }
 .icon-Event, .entity-Event .icon{
