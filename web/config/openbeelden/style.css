@@ -23,7 +23,7 @@ narrative:green:5cbc56*/
 .entity-MediaObject .entity-color, .color-MediaObject{
 	background-color: #dd3749;
 }
-.entity-Location .entity-color, .color-Location{
+.entity-Location .entity-color, .color-Location, .entity-Place .entity-color, .color-Place{
 	background-color: #878d94;
 }
 .entity-Event .entity-color, .color-Event{
@@ -55,7 +55,7 @@ narrative:green:5cbc56*/
 .icon-MediaObject, .entity-MediaObject .icon{
 	background-image: url('../../img/icon-object.png');
 }
-.icon-Location, .entity-Location .icon{
+.icon-Location, .entity-Location .icon, .icon-Location, .entity-Place .icon{
 	background-image: url('../../img/icon-place.png');
 }
 .icon-Event, .entity-Event .icon{
@@ -104,7 +104,7 @@ narrative:green:5cbc56*/
 .border-MediaObject{
 	border-color: #dd3749;
 }
-.border-Location{
+.border-Location, .border-Place{
 	border-color: #878d94;
 }
 .border-Event{
